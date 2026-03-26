@@ -234,7 +234,7 @@
                         <div class="conf-feature"><span>✓</span> <strong>Adaptable al sector</strong> (Contenido a medida)</div>
                     </div>
 
-                    <a href="#agenda" class="btn btn-primary">Agendar llamada para tu evento</a>
+                    <a href="#booking-conferencia" class="btn btn-primary">Solicitar Propuesta para mi Evento</a>
                 </div>
                 <div class="conf-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="David Ames Conferencias" class="conf-image">
@@ -338,13 +338,43 @@
         </div>
     </section>
 
-    <!-- Agenda una llamada -->
-    <section class="agenda-section" id="agenda">
+    <!-- Formulario de Booking de Conferencias -->
+    <section class="agenda-section" id="booking-conferencia">
         <div class="container reveal">
-            <div class="agenda-content">
-                <h2>¿Hablamos?</h2>
-                <p>Agenda una llamada conmigo sin ningún compromiso. Cuéntame los desafíos de tu negocio o cómo puedo aportar valor en tu próximo evento.</p>
-                <a href="https://calendly.com/" target="_blank" class="btn btn-primary" style="background-color: var(--color-black); color: var(--color-white); box-shadow: none; border: 1px solid rgba(255,255,255,0.2);">Agendar mi llamada en Calendly</a>
+            <div class="agenda-content" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <h2 style="text-align: center;">Solicitud de Conferencia</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">¿Quieres llevar a David a tu próximo evento o congreso? Completa los detalles a continuación y evaluaremos disponibilidad para prepararte una propuesta a medida.</p>
+                
+                <form class="contact-form" name="booking-conferencias" method="POST" data-netlify="true" action="/success.html">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" name="nombre" placeholder="Tu Nombre y Apellido" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" name="empresa" placeholder="Empresa u Organización" required>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="email" name="email" placeholder="Correo electrónico corporativo" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" name="fecha" placeholder="Fecha del evento" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 1rem; margin-bottom: 0;">
+                        <input type="text" name="ubicacion" placeholder="Lugar (Ciudad/País o 'Virtual')" required>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 1rem; margin-bottom: 0;">
+                        <textarea name="detalles" rows="4" placeholder="Breve descripción del evento (temática central, audiencia esperada, impacto que buscas generar...)" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enviar Solicitud de Propuesta</button>
+                    <p style="text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">Nuestro equipo se pondrá en contacto contigo a la brevedad.</p>
+                </form>
             </div>
         </div>
     </section>
