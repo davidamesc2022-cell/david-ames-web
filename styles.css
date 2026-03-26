@@ -1309,3 +1309,46 @@ footer p {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(16, 205, 25, 0.4);
 }
+
+/* ---------- Responsive Mobile Pequeño (<375px) ---------- */
+@media (max-width: 375px) {
+    .whatsapp-card {
+        padding: 3rem 1.25rem;
+    }
+
+    .whatsapp-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.9rem 1.25rem;
+    }
+
+    .pillar-card,
+    .ba-card,
+    .test-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero {
+        padding: 7rem 1.25rem 3rem;
+    }
+
+    .btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------- Responsive Tablet (600-900px) ---------- */
+@media (min-width: 600px) and (max-width: 900px) {
+    .whatsapp-card {
+        padding: 4rem 2.5rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
