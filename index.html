@@ -366,15 +366,15 @@
                 </div>
 
                 <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensaje enviado. Me pondré en contacto pronto.');">
+                    <form class="contact-form" name="contacto" method="POST" data-netlify="true" action="/#contacto">
                         <div class="form-group">
-                            <input type="text" placeholder="Tu Nombre completo" required>
+                            <input type="text" name="nombre" placeholder="Tu Nombre completo" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Tu Correo electrónico" required>
+                            <input type="email" name="email" placeholder="Tu Correo electrónico" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                            <textarea name="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
                     </form>
