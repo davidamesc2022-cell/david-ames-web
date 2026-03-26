@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Conferencia | David Ames</title>
+    <meta name="description" content="¿Quieres llevar a David Ames a tu próximo evento? Envíanos los detalles de tu conferencia y recibirás una propuesta a medida.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .booking-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 5rem;
+            background: radial-gradient(circle at 70% 20%, rgba(16, 205, 25, 0.07) 0%, transparent 50%), var(--color-bg);
+        }
+
+        .booking-wrapper {
+            max-width: 780px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .booking-badge {
+            display: inline-block;
+            background: rgba(16, 205, 25, 0.1);
+            color: var(--color-primary);
+            border: 1px solid rgba(16, 205, 25, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .booking-subtitle {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .booking-card {
+            background: linear-gradient(145deg, #141414, #0f0f0f);
+            border: 1px solid var(--color-border);
+            border-radius: 24px;
+            padding: clamp(2rem, 5vw, 3.5rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), #0b9e12);
+        }
+
+        .booking-form .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .booking-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .booking-form input,
+        .booking-form textarea,
+        .booking-form select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--color-white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .booking-form select option {
+            background: #111;
+            color: var(--color-white);
+        }
+
+        .booking-form input:focus,
+        .booking-form textarea:focus,
+        .booking-form select:focus {
+            border-color: var(--color-primary);
+            background: rgba(16, 205, 25, 0.04);
+            box-shadow: 0 0 0 3px rgba(16, 205, 25, 0.08);
+        }
+
+        .booking-form input::placeholder,
+        .booking-form textarea::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .booking-form textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-form .btn-submit {
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 1.1rem;
+            font-size: 1rem;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">David<span>Ames</span></a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html#mi-camino">Mi Camino</a>
+                <a href="index.html#el-libro">El Libro</a>
+                <a href="index.html#conferencias">Conferencias</a>
+                <a href="index.html#formate">Fórmate</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Booking Page -->
+    <main class="booking-page">
+        <div class="booking-wrapper">
+
+            <a href="index.html#conferencias" class="back-link">
+                ← Volver a Conferencias
+            </a>
+
+            <div class="booking-badge">🎙️ Solicitud de Speaker</div>
+            <h1 class="booking-title">Lleva a David<br><span class="highlight">a tu Escenario</span></h1>
+            <p class="booking-subtitle">¿Tienes un evento, congreso o jornada para tu empresa? Cuéntanos los detalles y evaluaremos la disponibilidad para prepararte una propuesta a medida.</p>
+
+            <div class="booking-card">
+                <form class="booking-form" name="booking-conferencias" method="POST" data-netlify="true" action="/success.html">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Nombre y Apellido *</label>
+                            <input type="text" name="nombre" placeholder="Ej: María García" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Empresa u Organización *</label>
+                            <input type="text" name="empresa" placeholder="Ej: Corporación ABC" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" name="email" placeholder="tu@empresa.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Teléfono / WhatsApp</label>
+                            <input type="tel" name="telefono" placeholder="+51 999 000 000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Fecha tentativa del evento *</label>
+                            <input type="text" name="fecha" placeholder="Ej: Junio 2025 o 15/06/2025" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ciudad / País *</label>
+                            <input type="text" name="ubicacion" placeholder="Ej: Lima, Perú o Virtual" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Modalidad del evento *</label>
+                        <select name="modalidad" required>
+                            <option value="" disabled selected>Selecciona la modalidad...</option>
+                            <option value="presencial">Presencial</option>
+                            <option value="virtual">Virtual / Online</option>
+                            <option value="hibrido">Híbrido</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Tamaño estimado de la audiencia</label>
+                        <select name="audiencia">
+                            <option value="" disabled selected>Selecciona un rango...</option>
+                            <option value="menos50">Menos de 50 personas</option>
+                            <option value="50-200">50 – 200 personas</option>
+                            <option value="200-500">200 – 500 personas</option>
+                            <option value="mas500">Más de 500 personas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Descripción del evento *</label>
+                        <textarea name="detalles" placeholder="Cuéntanos sobre la temática central del evento, el perfil de la audiencia y el impacto que buscas generar con la participación de David..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Enviar Solicitud de Propuesta →</button>
+                    <p class="form-note">Respondemos en un plazo de 24–48 horas hábiles. Tu información es confidencial.</p>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
