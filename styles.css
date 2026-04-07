@@ -500,15 +500,21 @@ header {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    width: 100%;
 }
 
-.optin-form input {
+.optin-form input[type="email"] {
     flex-grow: 1;
+    min-width: 220px;
 }
 
 @media (min-width: 600px) {
     .optin-form {
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .optin-form button {
+        flex-shrink: 0;
     }
 }
 
