@@ -726,24 +726,28 @@ header {
 @media (min-width: 768px) {
     .timeline-item {
         display: flex;
-        justify-content: flex-end;
-        width: 50%;
+        justify-content: flex-start;
+        width: 100%;
     }
     .timeline-item:nth-child(even) {
-        margin-left: 50%;
-        justify-content: flex-start;
+        margin-left: 0;
+        justify-content: flex-end;
     }
     .timeline-icon {
         left: 50%;
         transform: translateX(-50%);
     }
     .timeline-item:nth-child(odd) .timeline-content {
+        width: calc(50% - 40px);
         margin-left: 0;
-        margin-right: 40px;
+        margin-right: 0;
         text-align: right;
     }
     .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 40px;
+        width: calc(50% - 40px);
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
     }
 }
 
