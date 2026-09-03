@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Primario -->
+    <title>{TITULO_ARTICULO} | David Ames</title>
+    <meta name="description" content="{META_DESCRIPCION}">
+    <meta name="keywords" content="{PALABRAS_CLAVE}">
+    <meta name="author" content="David Ames">
+    <link rel="canonical" href="https://davidamesc.com/articulos/{SLUG}.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://davidamesc.com/articulos/{SLUG}.html">
+    <meta property="og:title" content="{TITULO_ARTICULO} | David Ames">
+    <meta property="og:description" content="{META_DESCRIPCION}">
+    <meta property="og:image" content="https://davidamesc.com/img/blog/{PORTADA_ARCHIVO}">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="David Ames">
+    <meta property="article:published_time" content="{FECHA_ISO_YYYY_MM_DD}">
+    <meta property="article:author" content="David Ames">
+    <meta property="article:section" content="{CATEGORIA}">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://davidamesc.com/articulos/{SLUG}.html">
+    <meta name="twitter:title" content="{TITULO_ARTICULO} | David Ames">
+    <meta name="twitter:description" content="{META_DESCRIPCION}">
+    <meta name="twitter:image" content="https://davidamesc.com/img/blog/{PORTADA_ARCHIVO}">
+
+    <!-- Schema.org: BlogPosting en JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://davidamesc.com/articulos/{SLUG}.html"
+      },
+      "headline": "{TITULO_ARTICULO}",
+      "description": "{META_DESCRIPCION}",
+      "image": "https://davidamesc.com/img/blog/{PORTADA_ARCHIVO}",
+      "author": {
+        "@type": "Person",
+        "name": "David Ames",
+        "url": "https://davidamesc.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "David Ames",
+        "url": "https://davidamesc.com"
+      },
+      "datePublished": "{FECHA_ISO_YYYY_MM_DD}",
+      "dateModified": "{FECHA_ISO_YYYY_MM_DD}"
+    }
+    </script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Enlace Relativo a Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">David<span>Ames</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">☰</button>
+            <nav class="nav-links" id="nav-links">
+                <a href="../index.html#mi-camino">Mi Camino</a>
+                <a href="../index.html#el-libro">El Libro</a>
+                <a href="../index.html#conferencias">Conferencias</a>
+                <a href="../index.html#formate">Fórmate</a>
+                <a href="../blog.html" class="highlight" style="font-weight: 600;">Blog</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido del Artículo -->
+    <main style="padding-top: 7rem; min-height: 80vh;">
+        <article class="article-container">
+            
+            <!-- Breadcrumbs / Navegación -->
+            <nav class="article-breadcrumbs" aria-label="Ruta de navegación">
+                <a href="../index.html">Inicio</a> / 
+                <a href="../blog.html">Blog</a> / 
+                <span style="color: var(--color-primary);">{CATEGORIA}</span>
+            </nav>
+
+            <!-- Cabecera del Artículo -->
+            <header class="article-header">
+                <span class="blog-badge">{CATEGORIA}</span>
+                <h1>{TITULO_ARTICULO}</h1>
+                <div class="article-header-meta">
+                    <span>Por <strong>David Ames</strong></span>
+                    <span>•</span>
+                    <time datetime="{FECHA_ISO_YYYY_MM_DD}">{FECHA_PUBLICACION}</time>
+                    <span>•</span>
+                    <span>{TIEMPO_LECTURA}</span>
+                </div>
+            </header>
+
+            <!-- Imagen Destacada -->
+            <div class="article-featured-img">
+                <img src="../img/blog/{PORTADA_ARCHIVO}" alt="{ALT_PORTADA}" loading="eager">
+            </div>
+
+            <!-- Cuerpo del Artículo -->
+            <div class="article-body">
+                {CONTENIDO_HTML_DEL_ARTICULO}
+            </div>
+
+            <!-- Caja de Autor -->
+            <section class="article-author-box">
+                <div class="article-author-avatar">DA</div>
+                <div style="flex: 1; min-width: 240px;">
+                    <h3 style="margin-bottom: 0.3rem; font-size: 1.15rem; color: var(--color-white);">David Ames</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                        Ingeniero, MBA, Speaker y Educador en Marketing Digital e Inteligencia Artificial. Ayudo a profesionales y emprendedores a crecer con estrategia y criterio humano.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Botón Volver -->
+            <div style="margin-top: 3.5rem; text-align: center;">
+                <a href="../blog.html" class="btn btn-outline">
+                    ← Volver a todos los artículos
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="text-align: center;">
+            <div style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-white); letter-spacing: -0.02em;">
+                David<span style="color: var(--color-primary);">Ames</span>
+            </div>
+            <p>&copy; 2026 David Ames. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+</body>
+</html>
