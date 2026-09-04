@@ -180,34 +180,56 @@ header {
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: 0.85rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--color-white);
-    letter-spacing: -0.01em;
+    gap: 0.9rem;
     text-decoration: none;
-}
-
-.logo span {
-    color: var(--color-primary);
-}
-
-.logo-img,
-.logo img {
-    height: 48px !important;
-    max-height: 48px !important;
-    width: auto !important;
-    object-fit: contain;
-    display: inline-block !important;
-    vertical-align: middle;
-    flex-shrink: 0;
     transition: var(--transition);
 }
 
-.logo:hover .logo-img,
-.logo:hover img {
+.logo-badge {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #1c1c1c, #0d0d0d);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    flex-shrink: 0;
+}
+
+.logo-badge img,
+.logo-img {
+    height: 35px !important;
+    max-height: 35px !important;
+    width: auto !important;
+    object-fit: contain;
+    display: block !important;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.logo-name {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+}
+
+.logo-name span {
+    color: var(--color-primary);
+}
+
+.logo:hover .logo-badge {
+    border-color: rgba(16, 205, 25, 0.6);
+    background: linear-gradient(145deg, #222222, #0f0f0f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(16, 205, 25, 0.25);
+}
+
+.logo:hover .logo-badge img {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 14px rgba(16, 205, 25, 0.65));
+    filter: drop-shadow(0 0 8px rgba(16, 205, 25, 0.5));
 }
 
 .nav-links {
