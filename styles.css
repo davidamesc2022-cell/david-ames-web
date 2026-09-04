@@ -1760,3 +1760,167 @@ footer p {
     }
 }
 
+/* ==========================================================================
+   Componentes Editoriales Enriquecidos (Plantilla Editorial David Ames)
+   ========================================================================== */
+
+/* Subtítulos H2 con indicador de diseño */
+.article-body h2 {
+    font-size: clamp(1.45rem, 2.5vw, 1.85rem) !important;
+    margin: 3.2rem 0 1.2rem !important;
+    color: var(--color-white) !important;
+    letter-spacing: -0.015em !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.article-body h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.15em;
+    background: linear-gradient(180deg, var(--color-primary), #0a8a11);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Subtítulos H3 diferenciados con tono verde menta suave */
+.article-body h3 {
+    font-size: 1.22rem !important;
+    margin: 2.2rem 0 0.75rem !important;
+    color: #6ee777 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Tarjeta de Idea Clave / Resumen (Callout) */
+.tarjeta-clave {
+    background: linear-gradient(145deg, #161616, #0d0d0d);
+    border: 1px solid rgba(16, 205, 25, 0.3);
+    border-radius: 14px;
+    padding: 1.6rem 2rem;
+    margin: 2.4rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-clave::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), transparent);
+}
+
+.tarjeta-clave-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.7rem;
+}
+
+.tarjeta-clave p {
+    margin: 0 !important;
+    color: #eaeaea !important;
+    font-size: 1.04rem !important;
+    line-height: 1.7 !important;
+}
+
+/* Cita Destacada de Gran Impacto */
+.quote-destacada {
+    margin: 2.8rem 0;
+    padding: 1.8rem 2.2rem 1.8rem 3rem;
+    background: radial-gradient(circle at 10% 20%, rgba(16, 205, 25, 0.08) 0%, transparent 70%), #111111;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 16px 16px 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.6;
+    position: relative;
+}
+
+.quote-destacada::before {
+    content: '“';
+    font-size: 3.8rem;
+    color: var(--color-primary);
+    opacity: 0.35;
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* Grilla de Micro-Tarjetas para Listas y Pasos */
+.grid-pasos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin: 2.2rem 0;
+}
+
+.paso-card {
+    background: #131313;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+
+.paso-card:hover {
+    border-color: rgba(16, 205, 25, 0.45);
+    transform: translateX(4px);
+    background: #171717;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.paso-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(16, 205, 25, 0.12);
+    color: var(--color-primary);
+    border: 1px solid rgba(16, 205, 25, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.paso-content h4 {
+    font-size: 1.08rem;
+    color: var(--color-white);
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.paso-content p {
+    margin: 0 !important;
+    color: var(--color-text-muted) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Palabras destacadas con acento verde en títulos */
+.text-green {
+    color: var(--color-primary);
+}
+
+
